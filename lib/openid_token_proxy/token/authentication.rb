@@ -12,7 +12,7 @@ module OpenIDTokenProxy
       module ClassMethods
         def require_valid_token(*args)
           before_action :require_valid_token, *args
-          after_action :expose_token_expiry_time
+          after_action :expose_token_expiry_time, *args
         end
       end
 
